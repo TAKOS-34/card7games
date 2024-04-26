@@ -1,0 +1,31 @@
+.regles {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 50%; /* Ajustez selon la taille souhaitée */
+    height: auto;
+    max-height: 90%;
+    max-width: 600px; /* Maximum width to prevent it being too large on wide screens */
+    background-color: rgba(104, 65, 110, 0.98); /* Légèrement plus opaque pour mieux lire le texte */
+    padding: 20px; /* Espacement à l'intérieur */
+    border-radius: 10px; /* Bords arrondis */
+    z-index: 100; /* S'assurer qu'il est au-dessus de l'arrière-plan sombre */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5); /* Ombre portée pour effet de profondeur */
+    grid-column: 1/4;
+    grid-row: 1/5;
+    margin: auto;
+}
+
+.regles h1 {
+    color: white;
+    font-size: 2rem;
+    flex-basis: 4.5rem;
+}
+
+.regles .rules_board{
+    overflow: auto;
+}
+
+.regles .rules_board::-webkit-scrollbar{
+    display: none;
+}

@@ -1,0 +1,18 @@
+.message-popup{
+    width: auto;
+
+    height: auto;
+    padding: 1vh;
+
+    z-index: 10;
+
+    margin: auto;
+
+    background-color: rgba(0, 0, 0, 0.75);
+
+    border-radius: 1rem;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

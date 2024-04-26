@@ -1,0 +1,433 @@
+.centerBox .gameBoardSix{
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 4fr 2fr 2fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+}
+.centerBox .gameBoardSix .containerChat .chatArea{
+    resize: none;
+    justify-self: center;
+    overflow-y: scroll;
+    border-radius: 1rem 1rem 0rem 0rem;
+}
+.centerBox .gameBoardSix .containerChat .chatArea::-webkit-scrollbar{
+    display: none;
+}
+.centerBox .gameBoardSix .containerChat{
+    grid-row: 3/5;
+    grid-column: 3;
+    margin-left: auto;
+
+    width: 100%;
+    display: grid;
+    grid-template-columns: 5fr 1fr;
+    grid-template-rows: 7fr 1fr;
+}
+
+.centerBox .gameBoardSix .containerListPlayer{
+    grid-row: 3;
+    grid-column: 2;
+    
+    border-radius:  1rem 1rem 0 0;
+
+    color: white;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.centerBox .gameBoardSix .containerListPlayer > ul{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.centerBox .gameBoardSix .timer{
+    grid-row: 4;
+    grid-column: 2;
+    border-radius:  0 0 1rem 1rem;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    font-size: 3.5rem;
+
+}
+.centerBox .gameBoardSix .timer,.centerBox .gameBoardSix .containerListPlayer{
+    background-color: rgba(104, 65, 110, 0.97);
+    width: 90%;
+    margin: 0 auto;
+
+}
+.centerBox .gameBoardSix .deck{
+    grid-row: 5;
+    grid-column: 1/3;
+}
+
+
+.centerBox .gameBoardSix .carteJoue{
+    grid-row: 1/3;
+    grid-column: 2/4;
+
+    background-color: rgba(104, 65, 110, 0.97);
+    border-radius: 2rem;
+    width: 90%;
+    height: 90%;
+    margin: auto;
+
+    display: grid;
+    grid-template-rows: repeat(2,1fr);
+    grid-template-columns: repeat(5,1fr);
+}
+
+.centerBox .gameBoardSix .deck .returnAnim{
+    animation: AnimCardGameReturn 500ms ease-out forwards;
+
+}
+
+.centerBox .gameBoardSix .carteJoue img{
+    max-height: 6rem;
+    max-width: 4.5rem;
+    padding: 0.3rem;
+    margin: auto;
+    animation: AnimCardGame 500ms ease-out forwards;
+}
+    
+.centerBox .gameBoardSix .centerButton{
+    grid-row: 5;
+    grid-column: 3;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.centerBox .gameBoardSix #leaveButton, .centerBox .gameBoardSix #pauseButton, .centerBox .gameBoardSix #rulesButton{
+    background: rgba(185, 185, 185);
+
+    color: rgba(65, 2, 65);
+    font-weight: 800;
+
+    border: none;
+    border-radius: 15px;
+    
+    width: 65%;
+    min-height: 30%;
+    max-height: 40%;
+
+    cursor: pointer;
+}
+.centerBox .gameBoardSix #leaveButton:hover, .centerBox .gameBoardSix #pauseButton:hover, .centerBox .gameBoardSix #rulesButton:hover{
+    background: rgb(165, 165, 165);
+}
+
+.centerBox .gameBoardSix #ligne1{
+    grid-row: 1;
+    grid-column: 1;
+}
+.centerBox .gameBoardSix #ligne2{
+    grid-row: 2;
+    grid-column: 1;
+}
+.centerBox .gameBoardSix #ligne3{
+    grid-row: 3;
+    grid-column: 1;
+}
+.centerBox .gameBoardSix #ligne4{
+    grid-row: 4;
+    grid-column: 1;
+}
+
+.centerBox .gameBoardSix .ligne{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.centerBox .gameBoardSix .ligne > :not(#scoreSixQuiPrend){
+    height: 8rem;
+    width: 6rem;
+    box-shadow: 8px 10px 10px 2px #0000009c, inset 0px 0px 20px 5px #0000002e;    border-radius: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.centerBox .gameBoardSix .ligne > *:nth-last-child(1){
+    background-color: rgb(108, 13, 13);
+    opacity: 0.9;
+}
+
+.centerBox .gameBoardSix .deck{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.centerBox .gameBoardSix .deck img{
+    height: 8rem;
+    width: 6rem;
+    
+    margin: 0.2rem;
+    animation: AnimCard 500ms ease-out forwards;
+    border-radius: 0.5rem;
+
+}
+
+.centerBox .gameBoardSix .deck img:hover{
+    transform: scale(1.15);
+}
+
+.depop{
+    animation: AnimCardGameReturn 500ms ease-out forwards;
+}
+
+.goCenter{
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.animSelectLine{
+    animation: AnimSelectLine 800ms ease-out infinite;
+}
+
+.cardPrise{
+    display: none;
+}
+
+.Affiche{
+    display: flex;
+    flex-direction: column;
+    z-index: 80;
+    width: 70%;
+
+    background-color: rgba(104, 65, 110, 0.97);
+
+    grid-row: 1/-1;
+    grid-column: 1/-1;
+
+    margin: auto;
+
+    border-radius: 1rem;
+}
+
+.Affiche img{
+    display: flex;
+    width: 10%;
+    margin: 0 0.1rem;
+}
+.hamburger-btn{
+    height: 30px; /*A changer #imo*/
+    width: 30px;
+    margin-left: auto ;
+    margin-right: 15px;
+    cursor: pointer;
+}
+.hamburger-line{
+    height: 3px;
+    background-color: white;
+}
+
+.hamburger-btn .hamburger-line:nth-child(1) {
+    transform: rotate(-45deg) translate(-8px,10px)
+
+}
+
+.hamburger-btn .hamburger-line:nth-child(2) {
+    transform: rotate(45deg) translate(8px,5px)
+}
+
+.boardCardPrise{
+    display: flex;
+    justify-content: space-around;
+    padding: 1rem;
+}
+
+.pseudoZindex{
+    z-index: 100 ;
+    margin: auto;
+}
+
+.centerBox .gameBoardSix .message-popup{
+    grid-column: 1/-1;
+    grid-row: 1/3
+}
+
+.centerBox .gameBoardSix #msgInfo{
+    grid-column: 1/-1;
+    grid-row: 2/6
+}
+
+#scoreSixQuiPrend{
+    position: absolute;
+    font-size: 3rem;
+    font-weight: 800;
+}
+@keyframes AnimSelectLine {
+    0% {
+        border: 2px solid rgba(255, 0, 255, 0.2); 
+    }
+    20% {
+        border: 2px solid rgba(255, 0, 255, 0.4); 
+    }
+    40% {
+        border: 2px solid rgba(255, 0, 255, 0.8); 
+    }
+    60% {
+        border: 2px solid rgba(255, 0, 255, 0.8);
+    }
+    80% {
+        border: 2px solid rgba(255, 0, 255, 0.4);
+    }
+    100% {
+        border: 2px solid rgba(255, 0, 255, 0.2);
+    }
+}
+
+
+@keyframes AnimCard{
+    0%{
+        transform: scale(1.15);
+    }
+    100%{
+        transform: 0;
+    }
+}
+
+@keyframes AnimCardGame{
+    0%{
+        transform: translateY(250%);
+    }
+    100%{
+        transform: translateY(0);
+    }
+}
+
+@keyframes AnimCardGameReturn{
+    0%{
+        transform: translateY(0);
+    }
+    100%{
+        transform: translateY(-250%);
+    }
+}
+
+@media screen and (max-width: 1215px) {
+    .centerBox .gameBoardSix .ligne > :not(#scoreSixQuiPrend),
+    .centerBox .gameBoardSix .deck img,
+    .centerBox .gameBoardSix .carteJoue img{
+        height: 6rem;
+        width: 4.5rem;
+    }
+    .centerBox .gameBoardSix .containerListPlayer{
+        font-size: 0.7rem;
+    }
+    .centerBox .gameBoardSix .containerListPlayer > ul{
+        display: flex;
+        flex-wrap: wrap;
+        font-size: 0.7rem;
+    }
+}
+
+@media screen and (max-height: 780px) {
+    .centerBox .gameBoardSix .ligne > :not(#scoreSixQuiPrend),
+    .centerBox .gameBoardSix .deck img{
+        height: 6rem;
+        width: 4.5rem;
+    }
+    .centerBox .gameBoardSix .carteJoue img{
+        height: 4.5rem;
+        width: 3.375rem;
+    }
+    .centerBox .gameBoardSix .containerListPlayer{
+        font-size: 0.7rem;
+    }
+    .centerBox .gameBoardSix .containerListPlayer > ul{
+        display: flex;
+        flex-wrap: wrap;
+        font-size: 0.7rem;
+    }
+}
+
+@media screen and (max-width: 780px) {
+    .centerBox .gameBoardSix .ligne > :not(#scoreSixQuiPrend),
+    .centerBox .gameBoardSix .deck img,
+    .centerBox .gameBoardSix .carteJoue img{
+        height: 4.5rem;
+        width: 3.375rem;
+    }
+    .centerBox .gameBoardSix .containerListPlayer{
+        font-size: 0.5rem;
+    }
+    .centerBox .gameBoardSix .containerListPlayer > ul{
+        display: flex;
+        flex-wrap: wrap;
+        font-size: 0.5rem;
+    }
+}
+
+@media screen and (max-height: 580px) {
+    .centerBox .gameBoardSix .ligne > *,
+    .centerBox .gameBoardSix .deck img,
+    .centerBox .gameBoardSix .carteJoue img{
+        height: 4.5rem;
+        width: 3.375rem;
+    }
+    .centerBox .gameBoardSix .containerListPlayer{
+        font-size: 0.5rem;
+    }
+    .centerBox .gameBoardSix .containerListPlayer > ul{
+        display: flex;
+        flex-wrap: wrap;
+        font-size: 0.5rem;
+    }
+}
+
+.gameBoardSix .carteJoue .card-container{
+    width: 100%;
+    display: grid;
+    grid-template-rows: auto 1fr;
+    margin: auto;
+}
+.gameBoardSix .carteJoue .card-container .card {
+    display: grid;
+    grid-template-rows: auto 1fr;
+    grid-template-columns: 1fr;
+    overflow: visible;
+    transform-style: preserve-3d;
+    transition: transform 0.3s ease;
+    margin:auto;
+}
+
+.card-container .card {
+    transform: rotateY(0deg);
+}
+.card-container .cardReverse {
+    transform: rotateY(180deg);
+}
+.pseudoMaCarte{
+    margin: auto;
+}
+.gameBoardSix .carteJoue .card-container .card .card-front,
+.gameBoardSix .carteJoue .card-container .card .card-back {
+    grid-row: 2;
+    grid-column: 1;
+    backface-visibility: hidden;
+}
+
+.gameBoardSix .carteJoue .card-container .card .card-back {
+    transform: rotateY(-180deg);
+}
+.gameBoardSix .carteJoue .card-container .card .card-backReturn {
+    overflow: visible;
+    transform-style: preserve-3d;
+    transition: transform 0.3s ease;
+    transform: rotateY(0deg);
+}

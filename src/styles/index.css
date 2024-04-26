@@ -1,0 +1,46 @@
+*{
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    text-decoration: none;
+}
+
+input{ /* style pour tous les input cependant on changera la width et height individuellement selon notre choix*/
+    border: none;
+    border-radius: 15px;
+    text-indent: 10px;
+}
+
+#root{
+    margin: 0;
+    padding: 0;
+
+    width: 100vw;
+    height: 100vh;
+
+    background-image: url(../assets/bg.png);
+    background-size: cover;
+    background-position: center;
+
+    color: white;
+    
+    display: grid;
+    grid-template-columns: 1;
+    grid-template-rows: 0.8fr 8fr 0.5fr;
+}
+
+#playerMessage {
+    border-radius: 0;
+}
+
+#sendMsgChat{
+    background-color: rgba(104, 65, 110 , 95%);
+    color: white;
+    border-radius: 0rem 0rem 1rem 0rem;
+    border: none;
+}
+
+#sendMsgChat:hover{
+    background-color: #44244e;
+    cursor: pointer;
+}
