@@ -9,7 +9,8 @@ import Room from './Room';
 import Bataille from './Bataille';
 import SixQuiPrend from './SixQuiPrend';
 import Uno from './Uno';
-import Classement from './Classement'
+import Classement from './Classement';
+import Credits from './Credits';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 export const AuthContext = React.createContext(null);
@@ -36,6 +37,7 @@ function App() {
           <Route path="/sixquiprend/:roomId" element={<SixQuiPrend />} />
           <Route path="/uno/:roomId" element={<Uno />} />
           <Route path="/classement" element={<Classement />} />
+          <Route path="/credits" element={<Credits/>} />
           <Route path="*" element={<Accueil />} />
         </Routes>
         <Footer />

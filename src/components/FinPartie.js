@@ -9,7 +9,7 @@ function FinPartie(props) {
     const gameName = props.gameName;
     const id = props.id;
     const pseudo = props.pseudo;
-    
+
     return (
         <>
             <div className='classementFin'>
