@@ -45,5 +45,5 @@ Chaque jeu dispose d'un bouton "Règles" pour consulter les spécificités de ch
 
 ## BONUS - Serveur pour tester le projet
 
-- **Accès en ligne** : Le projet est accessible à l'adresse `http://card7games.fr:3000/`. Assurez-vous de désactiver les proxy si vous êtes sur un réseau universitaire car le port 3000 est bloqué sur ce dernier.
+- **Accès en ligne** : Le projet est accessible à l'adresse `https://card7games.fr`. Assurez-vous de désactiver les proxy si vous êtes sur un réseau universitaire car le port 3000 est bloqué sur ce dernier.
 - **Bots disponibles** : Vous trouverez dans notre projet des bots pour chacun des jeux, que vous pouvez ajouter depuis la salle lorsque vous êtes le chef.
