@@ -10,7 +10,6 @@ const bcrypt = require('bcrypt');
 const jwt = require('jsonwebtoken');
 const crypto = require('crypto');
 require('dotenv').config({path:"../.env"});
-app.use(cors());
 const io = new Server(3001,{
     cors :{
         origin : process.env.FRONTEND_URL
