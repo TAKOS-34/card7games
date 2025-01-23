@@ -1,0 +1,261 @@
+.centerBox .gameBoardBataille .deck{
+    display: flex;
+}
+
+.gameBoardBataille{
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    grid-template-rows: 1fr 2fr 0.8fr 1fr;
+
+    height: 100%;
+}
+
+/*CARTE*/
+.centerBox .gameBoardBataille .deck{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+
+    grid-row: 4;
+    grid-column: 1;
+
+}
+
+.centerBox .gameBoardBataille .deck img{
+    height: 7rem;
+    width: 6rem;
+    
+    margin: 0.2rem;
+    animation: AnimCard 500ms ease-out forwards;
+    border-radius: 0.5rem;
+    transition: 0.5s ease-in-out;
+
+}
+
+.centerBox .gameBoardBataille .deck img:hover{
+    transform: scale(1.15);
+}
+/*CHAT*/
+.gameBoardBataille .containerChat {
+    grid-row: 2/4;
+    grid-column: 2;
+    
+    display: grid;
+    grid-template-columns: 5fr 1fr;
+    grid-template-rows: 7fr 1fr;
+}
+
+.containerChat .chatArea {
+    resize: none;
+    justify-self: center;
+    width: 100%;
+    overflow-y: scroll;
+}
+
+/*LEAVEBUTTON*/
+.gameBoardBataille .centerButton{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    grid-column: 2;
+    grid-row: 4;
+}
+
+.gameBoardBataille #leaveButton, .gameBoardBataille #pauseButton, .gameBoardBataille #rulesButton{
+    background: rgba(185, 185, 185);
+
+    color: rgba(65, 2, 65);
+    font-weight: 800;
+
+    border: none;
+    border-radius: 15px;
+
+    width: 30%;
+    min-height: 40%;
+    max-height: 60%;
+
+    cursor: pointer;
+}
+
+.gameBoardBataille #leaveButton:hover, .gameBoardBataille #pauseButton:hover, .gameBoardBataille #rulesButton:hover{
+    background: rgb(165, 165, 165);
+}
+
+/*LISTPLAYER*/
+
+.centerBox .gameBoardBataille .containerListPlayer{
+    background-color: rgba(104, 65, 110, 0.97);
+    width: 100%;
+    height: 90%;
+    margin: auto 0 0 0 ;
+
+    grid-row: 1;
+    grid-column: 2;
+    
+    border-radius:  1rem 1rem 0 0;
+
+    color: white;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+.centerBox .gameBoardBataille .containerListPlayer > h1{
+    font-size: 2vw;
+    height: 4vw;
+}
+
+.centerBox .gameBoardBataille .containerListPlayer > ul > li{
+    font-size: 1rem
+}
+
+.centerBox .gameBoardBataille .containerListPlayer > ul{
+    overflow-y: auto;
+}
+.centerBox .gameBoardBataille .containerListPlayer > ul::-webkit-scrollbar{
+    display: none;
+}
+
+/*Msg PopUp*/
+.centerBox .gameBoardBataille .message-popup{
+    
+    width: auto;
+
+    height: auto;
+    padding: 1vh;
+
+    grid-row: 1;
+    grid-column: 1;
+
+    z-index: 10;
+
+    margin: auto;
+
+    background-color: rgba(0, 0, 0, 0.75);
+
+    border-radius: 1rem;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.centerBox .gameBoardBataille #msgInfo{
+
+    grid-row: 3;
+    grid-column: 1;
+
+}
+
+/*Game*/
+.centerBox .gameBoardBataille .gameBataille{
+    grid-row: 1/4;
+    grid-column: 1;
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.centerBox .gameBoardBataille .gameBataille > div:not(#piocheBataille){
+    margin: 0rem 1rem;
+
+    padding: 0.5rem;
+
+    border-radius: 1rem;
+    flex-basis: 15%;
+}
+.centerBox .gameBoardBataille .gameBataille > div > div{
+    height: 8rem;
+    width: 5.5rem;
+
+    border: 0.2rem solid black;
+    border-radius: 0.5rem;
+    
+    margin: auto;
+    background-color: rgba(104, 65, 110, 0.97);
+    padding: 0.8rem 0.5rem;
+}
+.centerBox .gameBoardBataille .gameBataille > div > p{
+    text-align: center;
+}
+.centerBox .gameBoardBataille .gameBataille > div > div > img{
+    width: 100%;
+    height: 100%;
+}
+
+.centerBox .gameBoardBataille  #piocheBataille{
+    grid-row: 1/4;
+    grid-column: 1;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    margin-right: 0.8rem;
+}
+.centerBox .gameBoardBataille #piocheBataille > p{
+    color: rgb(160, 76, 172);
+    text-shadow: 
+        -1px -1px 0 black,
+        1px -1px 0 black,
+        -1px  1px 0 black,
+        1px  1px 0 black;
+    font-weight: 800;
+    font-size: 3rem;
+    position: absolute;
+    transform: translate(-83%, -33%);
+}
+.centerBox .gameBoardBataille #piocheBataille img{
+    grid-row: 1;
+    grid-column: 1;
+    width: 4rem;
+    height: 5.5rem;
+}
+/* anim bataille*/
+
+.gameBataille >div .bataille{
+    animation: AnimBataille 800ms ease-out infinite !important;
+}
+@keyframes AnimCard{
+    0%{
+        transform: scale(1.15);
+    }
+    100%{
+        transform: 0;
+    }
+}
+
+@keyframes AnimBataille {
+    0% {
+        border: 3px solid rgba(255, 0, 255, 0.2); 
+    }
+    20% {
+        border: 3px solid rgba(255, 0, 255, 0.4); 
+    }
+    40% {
+        border: 3px solid rgba(255, 0, 255, 0.8); 
+    }
+    60% {
+        border: 3px solid rgba(255, 0, 255, 0.8);
+    }
+    80% {
+        border: 3px solid rgba(255, 0, 255, 0.4);
+    }
+    100% {
+        border: 3px solid rgba(255, 0, 255, 0.2);
+    }
+}
+
+
+
+@media screen and (max-width: 930px) {
+    .centerBox .gameBoardBataille .gameBataille > div:not(#piocheBataille) {
+        flex-basis: 15%;
+    }
+
+    .centerBox .gameBoardBataille .gameBataille > div > div {
+        height: 5rem;
+        width: 3.5rem;
+    }
+}

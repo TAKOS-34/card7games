@@ -1,0 +1,34 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+.footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    grid-row: 3;
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    color: ghostwhite;
+    font-size: 1.5rem;
+    font-weight: 800;
+    animation: AnimFooter 600ms ease-out forwards;
+    font-family: "Bebas Neue", sans-serif;
+    color:white;
+}
+
+.footer > *:hover {
+    cursor: url('https://cdn.discordapp.com/emojis/1193338309766828093.webp?size=32&quality=lossless'), auto;
+}
+
+.footer a {
+	color:white;
+}
+
+@keyframes AnimFooter{
+    0%{
+        transform: translateY(160%);
+    }
+    100%{
+        transform: translateY(0);
+    }
+}

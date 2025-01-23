@@ -1,0 +1,70 @@
+.containerConnectInscri{
+    grid-row: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.centerConnectInscri{
+    color:white;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    
+
+    border: 0.2rem solid black;
+    border-radius: 1rem;
+
+    background-color: rgba(104, 65, 110, 0.804);  
+    backdrop-filter: blur(5px);
+
+    min-width: 30%;
+    height: 50%;
+}
+
+.centerConnectInscri form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    
+    width: 100%;
+    height: 100%;
+}
+
+.centerConnectInscri form > input{
+    width: 65%;
+    height: 10%;
+}
+
+.centerConnectInscri form > button{
+    background: rgba(185, 185, 185);
+
+    color: rgba(104, 65, 110);
+    font-weight: 800;
+
+    border: none;
+    border-radius: 15px;
+
+    width: 65%;
+    height: 10%;
+
+    cursor: pointer;
+
+}
+
+.centerConnectInscri form > button:hover{
+    background: rgb(165, 165, 165);
+}
+
+.link-text {
+    color:white;
+}
+
+.link-text a {
+    color:white;
+    text-decoration: none;
+}

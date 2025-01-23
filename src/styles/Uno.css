@@ -1,0 +1,345 @@
+.centerBox .gameBoardUno{
+    width: 100%;
+    height: 100%;
+
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    grid-template-rows: 1fr 2fr 0.8fr 1fr;
+}
+
+.centerBox .gameBoardUno .containerChat .chatArea{
+    resize: none;
+    justify-self: center;
+    overflow-y: scroll;
+}
+
+.centerBox .gameBoardUno .containerChat{
+    grid-row: 2/4;
+    grid-column: 2;
+    margin-left: auto;
+
+    width: 100%;
+    display: grid;
+    grid-template-columns: 5fr 1fr;
+    grid-template-rows: 7fr 1fr;
+}
+
+.centerBox .gameBoardUno .containerListPlayer{
+    background-color: rgba(104, 65, 110, 0.97);
+    width: 100%;
+    height: 90%;
+    margin: auto 0 0 0 ;
+}
+
+.centerBox .gameBoardUno .containerListPlayer > h1{
+    font-size: 2vw;
+    padding: 0 0rem 1rem 0;
+}
+
+
+.centerBox .gameBoardUno .containerListPlayer{
+    grid-row: 1;
+    grid-column: 2;
+    
+    border-radius:  1rem 1rem 0 0;
+
+    color: white;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.centerBox .gameBoardUno .containerListPlayer > ul{
+    overflow-y: auto;
+}
+.centerBox .gameBoardUno .containerListPlayer > ul::-webkit-scrollbar{
+    display: none;
+}
+
+.centerBox .gameBoardUno #leaveButton, .centerBox .gameBoardUno #pauseButton, .gameBoardUno #rulesButton{
+    background: rgba(185, 185, 185);
+
+    color: rgba(65, 2, 65);
+    font-weight: 800;
+
+    border: none;
+    border-radius: 15px;
+    
+    width: 65%;
+    min-height: 30%;
+    max-height: 40%;
+
+    cursor: pointer;
+}
+
+.centerBox .gameBoardUno #leaveButton:hover, .centerBox .gameBoardUno #pauseButton:hover .gameBoardUno #rulesButton:hover{
+    background: rgb(165, 165, 165);
+}
+
+.centerBox .gameBoardUno .centerButton{
+    grid-row: 4;
+    grid-column: 2;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.centerBox .gameBoardUno .deck{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    grid-row: 4;
+    grid-column: 1;
+}
+
+.centerBox .gameBoardUno .deck img{
+    height: 7rem;
+    width: 6rem;
+    
+    margin: 0.2rem;
+    animation: AnimCard 500ms ease-out forwards;
+    border-radius: 0.5rem;
+    transition: 0.5s ease-in-out;
+}
+
+.centerBox .gameBoardUno .deck .jouable:hover{
+    transform: scale(1.15);
+    cursor: pointer;
+}
+
+.centerBox .gameBoardUno .deck img:not(.jouable){
+    filter: grayscale(80%);
+    transform: translateY(10%);
+}
+
+.centerBox .gameBoardUno .Uno {
+    grid-row: 1/4;
+    grid-column: 1;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.3s ease-in-out;
+}
+
+.centerBox .gameBoardUno .Uno .talon {
+    height: 40%;
+    justify-self: center;
+}
+
+.centerBox .gameBoardUno .Uno .talon img {
+    height: 98%;
+}
+
+.centerBox .gameBoardUno .Uno button {
+    height: 15%;
+    width: 15%;
+    transition: 0.3s ease-in-out;
+
+}
+
+.centerBox .gameBoardUno .message-popup{
+    
+    width: auto;
+
+    height: auto;
+    padding: 1vh;
+
+    grid-row: 1;
+    grid-column: 1;
+
+    z-index: 10;
+
+    margin: auto;
+
+    background-color: rgba(0, 0, 0, 0.75);
+
+    border-radius: 1rem;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.centerBox .gameBoardUno #msgInfo{
+
+    grid-row: 3;
+    grid-column: 1;
+
+}
+
+.centerBox .gameBoardUno .Uno .pioche{
+    height: 40%;
+    cursor: pointer;
+    margin-left: 1rem ;
+}
+
+.centerBox .gameBoardUno .Uno .pioche:hover{
+    filter: grayscale(30%);
+    scale: 1.05;
+    transition: 0.3s ease-in-out;
+}
+.centerBox .gameBoardUno .message-popup p img{
+    width: 10%;
+    height: 10%;
+    margin-left: 45%;
+}
+
+.centerBox .gameBoardUno .message-popup p .buttonMsg{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+
+    margin-top: 0.2rem;
+}
+
+.centerBox .gameBoardUno .message-popup p .buttonMsg a{
+    width: 3.5vw;
+
+    text-align: center;
+    
+    border-radius: 1rem;
+    
+    cursor: pointer;
+    margin: 0.5vw 0.5vw;
+}
+
+.centerBox .gameBoardUno .message-popup p .buttonMsg #pioche, 
+.centerBox .gameBoardUno .message-popup p .buttonMsg #jouer{
+    background-color: rgba(104, 65, 110);
+}
+
+.centerBox .gameBoardUno .message-popup p .buttonMsg #pioche:hover,
+.centerBox .gameBoardUno .message-popup p .buttonMsg #jouer:hover{
+    background-color: #54325F;
+}
+
+.centerBox .gameBoardUno .message-popup p .buttonMsg #rouge{
+    background-color: rgb(255, 85, 85);
+    color: black;
+}
+
+.centerBox .gameBoardUno .message-popup p .buttonMsg #bleu{
+    background-color: rgb(86, 85, 255);
+    color: black;
+}
+
+.centerBox .gameBoardUno .message-popup p .buttonMsg #vert{
+    background-color: rgb(85, 170, 85);
+    color: black;
+}
+
+.centerBox .gameBoardUno .message-popup p .buttonMsg #jaune{
+    background-color: rgb(255, 170, 1);
+    color: black;
+}
+
+.centerBox .gameBoardUno .message-popup p .buttonMsg #rouge:hover{
+    background-color: rgb(253, 68, 68);
+    color: black;
+}
+
+.centerBox .gameBoardUno .message-popup p .buttonMsg #bleu:hover{
+    background-color: rgb(68, 68, 255);
+    color: black;
+}
+
+.centerBox .gameBoardUno .message-popup p .buttonMsg #vert:hover{
+    background-color: rgb(66, 172, 66);
+    color: black;
+}
+
+.centerBox .gameBoardUno .message-popup p .buttonMsg #jaune:hover{
+    background-color: rgb(189, 126, 2);
+    color: black;
+}
+@keyframes bleu {
+    0% {
+        border: 3px solid rgba(0, 0, 255, 0.2); 
+    }
+    20% {
+        border: 3px solid rgba(0, 0, 255, 0.4); 
+    }
+    40% {
+        border: 3px solid rgba(0, 0, 255, 0.8); 
+    }
+    60% {
+        border: 3px solid rgba(0, 0, 255, 0.8);
+    }
+    80% {
+        border: 3px solid rgba(0, 0, 255, 0.4);
+    }
+    100% {
+        border: 3px solid rgba(0, 0, 255, 0.2);
+    }
+}
+
+
+@keyframes jaune {
+    0% {
+        border: 3px solid rgba(255, 255, 0, 0.2); 
+    }
+    20% {
+        border: 3px solid rgba(255, 255, 0, 0.4); 
+    }
+    40% {
+        border: 3px solid rgba(255, 255, 0, 0.8); 
+    }
+    60% {
+        border: 3px solid rgba(255, 255, 0, 0.8);
+    }
+    80% {
+        border: 3px solid rgba(255, 255, 0, 0.4);
+    }
+    100% {
+        border: 3px solid rgba(255, 255, 0, 0.2);
+    }
+}
+
+
+@keyframes rouge {
+    0% {
+        border: 3px solid rgba(255, 0, 0, 0.2); 
+    }
+    20% {
+        border: 3px solid rgba(255, 0, 0, 0.4); 
+    }
+    40% {
+        border: 3px solid rgba(255, 0, 0, 0.8); 
+    }
+    60% {
+        border: 3px solid rgba(255, 0, 0, 0.8);
+    }
+    80% {
+        border: 3px solid rgba(255, 0, 0, 0.4);
+    }
+    100% {
+        border: 3px solid rgba(255, 0, 0, 0.2);
+    }
+}
+
+
+@keyframes vert {
+    0% {
+        border: 3px solid rgba(0, 255, 0, 0.2); 
+    }
+    20% {
+        border: 3px solid rgba(0, 255, 0, 0.4); 
+    }
+    40% {
+        border: 3px solid rgba(0, 255, 0, 0.8); 
+    }
+    60% {
+        border: 3px solid rgba(0, 255, 0, 0.8);
+    }
+    80% {
+        border: 3px solid rgba(0, 255, 0, 0.4);
+    }
+    100% {
+        border: 3px solid rgba(0, 255, 0, 0.2);
+    }
+}

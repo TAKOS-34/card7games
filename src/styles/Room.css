@@ -1,0 +1,134 @@
+.centerRoom{
+    display: grid;
+    grid-template-columns: 0.9fr 2fr 2fr;
+    grid-template-rows: 0.6fr 1fr 5fr 2fr;
+    width: 80%;
+    height: 80%;
+
+}
+/*ListJ*/
+.centerRoom .containerListPlayer{
+    grid-row: 3/4;
+    grid-column: 1;
+    border-radius: 1rem 0 0 1rem;
+    background-color: rgba(104, 65, 110, 95%);
+
+}
+.centerRoom .containerListPlayer > .gridItem p{
+    color: #9b9898;
+}
+
+.centerRoom .containerListPlayer > .gridItem #listeJ{
+    font-size: 1.3vw;
+    font-weight: 800;
+}
+.centerRoom .containerListPlayer > .gridItem{
+    flex-direction: column;
+    align-content: center;
+
+    padding: 0.6rem
+}
+.centerRoom .containerListPlayer > .gridItem > ul {
+    margin-top: 1rem;
+    width: 100%;
+    overflow-y: auto;
+}
+.centerRoom .containerListPlayer > .gridItem > ul li{
+    color:#9b9898;
+    font-size: 1.2vw;
+
+}
+
+/*Chat*/
+.centerRoom .containerChat {
+    grid-row: 3;
+    grid-column: 2/4;
+    
+    display: grid;
+    grid-template-columns: 5fr 1fr;
+    grid-template-rows: 7fr 1fr;
+}
+
+.containerChat .chatArea {
+    resize: none;
+    grid-column: 1/3;
+    grid-row: 1;
+    justify-self: center;
+    width: 100%;
+    overflow-y: scroll;
+}
+.containerChat #playerMessage {
+    resize: none;
+    grid-column: 1;
+    grid-row: 2;
+    border-radius: 0rem 0rem 0rem 1rem;
+}
+
+/*Button*/
+.centerRoom .button > button{
+    background: rgba(185, 185, 185);
+
+    color: rgba(65, 2, 65);
+    font-weight: 800;
+
+    border: none;
+    border-radius: 15px;
+
+    width: 15%;
+    min-height: 40%;
+    max-height: 60%;
+
+    cursor: pointer;
+
+}
+.centerRoom > .gridItem > button:hover{
+    background: rgb(165, 165, 165);
+}
+.centerRoom .button{
+    grid-row: 4;
+    grid-column: 1/4;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+/*IdRoom*/
+.centerRoom .idRoom{
+    grid-row: 2;
+    grid-column: 2/4;
+
+    width: 100%;
+    height: 100%;
+    color:#9b9898;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: rgba(104, 65, 110, 95%);
+    border-radius: 1rem 1rem 0 0;
+
+    transition: 0.5s ease-in-out;
+}
+
+.centerRoom .idRoom #idRoomS{
+    text-decoration: underline;
+}
+
+.centerRoom .idRoom #idRoomS:hover{
+    cursor: pointer;
+    color: rgb(255, 255, 255); 
+}
+
+.centerRoom .message-popup{
+    grid-row: 1;
+    grid-column: 2/4;
+}
+
+#botDifficulty {
+    border-radius: 12px;
+    text-align: center;
+    width: 15%;
+    min-height: 40%;
+    max-height: 60%;
+}

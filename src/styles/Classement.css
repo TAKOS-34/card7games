@@ -1,0 +1,89 @@
+
+
+.grid-container{
+    color:white;
+
+    border: 0.2rem solid black;
+    border-radius: 1rem;
+
+    background-color: rgba(104, 65, 110, 0.804);  
+    backdrop-filter: blur(5px);
+
+    width: clamp(30%, 50%, 60%);
+    height: 50%;
+
+    display: grid;
+    grid-template-rows: 30fr 60fr 10fr;
+
+    font-size: 1.2vw;
+}
+/*Header*/
+.grid-container .gridHeader{
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 3fr 20fr 20fr 20fr 20fr;
+
+    height: 100%;
+
+}
+.grid-container .gridHeader h2{
+    grid-row: 1;
+    grid-column: 1/6;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.grid-container .gridHeader .game1{
+    grid-row: 2;
+    grid-column: 3;
+    cursor: pointer;
+    margin: auto;
+
+}
+.grid-container .gridHeader .game2{
+    grid-row: 2;
+    grid-column: 4;
+    cursor: pointer;
+    margin: auto;
+}
+.grid-container .gridHeader .game3{
+    grid-row: 2;
+    grid-column: 5;
+    cursor: pointer;
+    margin: auto;
+}
+/*Centre*/
+.grid-container .ClassementGrid {
+    overflow-y: auto;
+    margin-right: -16px;
+}
+
+.grid-container .ClassementGrid .Player{
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 3fr 20fr 20fr 20fr 20fr;
+
+}
+.game1,.game2,.game3{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/*Footer*/
+
+.grid-container .gridFooter{
+    height: 100%;
+    grid-row: 3;
+
+
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 3fr 20fr 20fr 20fr 20fr;
+
+}
+.grid-container .gridFooter > p {
+    margin: auto auto auto 0;
+}
